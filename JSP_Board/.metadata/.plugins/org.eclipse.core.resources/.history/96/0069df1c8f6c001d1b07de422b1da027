@@ -1,0 +1,22 @@
+package domain;
+
+public class BoardVO {
+	private int bno;
+	private String title;
+	private String writer;
+	private String content;
+	private String reg_date;
+	
+	//기본생성자
+	public BoardVO() {}
+	
+	//insert : title, writer, content
+	
+	
+	//list : bno, title, writer, reg_date
+	
+	//update : bno, title, content
+	
+	//detail : bno, title, writer, reg_date, content
+	
+}

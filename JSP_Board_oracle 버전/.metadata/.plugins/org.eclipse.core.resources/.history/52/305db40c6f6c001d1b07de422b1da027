@@ -1,0 +1,10 @@
+use javadb
+
+-- 2022-11-25 생성
+create table board(
+bno int not null auto_increment,
+title varchar(100) not null,
+writer varchar(100) not null,
+content text,
+reg_date datetime default current_timestamp,
+primary key(bno));

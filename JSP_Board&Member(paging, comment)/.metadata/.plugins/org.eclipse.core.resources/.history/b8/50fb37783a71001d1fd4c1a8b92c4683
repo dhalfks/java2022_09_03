@@ -1,0 +1,12 @@
+package service;
+
+import repository.BoardDAOImpl;
+
+public class BoardServiceImpl implements BoardService {
+
+	private BoardDAO bdao;
+	
+	public BoardServiceImpl() {
+		bdao = new BoardDAOImpl();
+	}
+}

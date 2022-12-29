@@ -1,0 +1,14 @@
+package repository;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class BoardDAOImpl implements BoardDAO {
+
+	//DB와 연결
+	private SqlSession sql;
+	private final String NS = "BoardMapper."; //namespace설정
+	
+	public BoardDAOImpl() {
+		
+	}
+}

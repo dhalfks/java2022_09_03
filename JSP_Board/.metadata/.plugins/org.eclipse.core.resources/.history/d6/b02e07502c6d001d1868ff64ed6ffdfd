@@ -1,0 +1,13 @@
+package service;
+
+import repository.BoardDAO;
+import repository.BoardDAOImpl;
+
+public class BoardServiceImpl implements BoardService {
+
+	private BoardDAO bdao;  //repository -> interface로 생성
+	
+	public BoardServiceImpl() {
+		bdao = new BoardDAOImpl(); //repository -> class로 생성
+	}
+}

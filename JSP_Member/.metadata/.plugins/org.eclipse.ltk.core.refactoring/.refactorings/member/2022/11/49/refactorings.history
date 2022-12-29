@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;member/src/main/java/orm/MybaitsConfig.xml&apos; to &apos;MybatisConfig.xml&apos;" description="Rename resource &apos;MybaitsConfig.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/java/orm/MybaitsConfig.xml" name="MybatisConfig.xml" stamp="1669688736548" updateReferences="true"/>
+</session>
