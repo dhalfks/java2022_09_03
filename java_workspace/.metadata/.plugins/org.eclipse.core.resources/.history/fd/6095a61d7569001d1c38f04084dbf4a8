@@ -1,0 +1,15 @@
+package jdbc;
+
+public class ProductService implements Service {
+
+	private DAO dao;
+	public ProductService() {
+		dao = new ProductDAO();
+	}
+	@Override
+	public int register(Product product) {
+		// TODO Auto-generated method stub
+		System.out.println("insert_service error!!");
+		return dao.insert(product);
+	}
+}

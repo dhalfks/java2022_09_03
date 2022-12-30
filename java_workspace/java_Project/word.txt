@@ -1,0 +1,6 @@
+Word [word=apple, mean=11]
+Word [word=dog, mean=22]
+Word [word=cat, mean=33]
+Word [word=apple, mean=44]
+Word [word=hello, mean=안녕]
+Word [word=hi, mean=안녕]

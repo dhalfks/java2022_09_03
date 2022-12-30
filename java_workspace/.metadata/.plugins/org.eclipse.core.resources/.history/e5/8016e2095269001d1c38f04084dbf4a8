@@ -1,0 +1,16 @@
+package jdbc;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Product p1 = new Product();
+		p1.setPno(1);
+		p1.setPname("옷");
+		p1.setPrice(15000);
+		p1.setRegdate("2022-11-21");
+		p1.setMadeby("Korea");
+		
+
+	}
+
+}

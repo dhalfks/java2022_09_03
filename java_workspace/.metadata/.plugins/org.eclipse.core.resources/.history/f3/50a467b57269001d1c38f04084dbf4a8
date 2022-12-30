@@ -1,0 +1,85 @@
+package jdbc;
+
+import java.util.Scanner;
+
+public class ProcuctController {
+
+	//상품등록, 상품리스트보기, 상품상세페이지보기, 상품수정, 상품삭제
+	//데이터베이스 연동한 후 컨트롤러에서 모든메뉴를 분기처리
+	//서비는 컨트롤러에서 호출, DAO는 서비스가 호출
+	private Scanner scan;
+	private Service svc;
+	private boolean flag; // 종료 변수 false = 종료
+	
+	public ProcuctController() {
+		scan = new Scanner(System.in);
+		svc = new ProductService(); //service 구현 객체
+		flag = true;
+		printMenu();
+	}
+
+	private void printMenu() {
+		while(flag) {
+			System.out.println("--상품관리시스템--");
+			System.out.println("1.등록 2.목록 3.찾기 4.수정 5.삭제 Etc.종료  메뉴선택>>");
+			int menu = scan.nextInt();
+			
+			switch(menu) {
+			case 1:
+				System.out.println("등록메뉴");
+				//실행 메서드를 등록
+				register();
+				break;
+			case 2:
+				System.out.println("list메뉴");
+				//실행 메서드를 등록
+				list();
+				break;
+			case 3:
+				System.out.println("detail메뉴");
+				//실행 메서드를 등록
+				detail();
+				break;
+			case 4:
+				System.out.println("edit메뉴");
+				//실행 메서드를 등록
+				edit();
+				break;
+			case 5:
+				System.out.println("remove메뉴");
+				//실행 메서드를 등록
+				remove();
+				break;
+				default:
+					flag = false;
+					break;
+			}
+		}
+		
+	}
+
+	private void remove() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void edit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void detail() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void list() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void register() {
+		// TODO Auto-generated method stub
+		
+	}
+}

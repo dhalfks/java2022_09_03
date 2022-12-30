@@ -1,0 +1,14 @@
+package new02;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+public class NetworkEx02 {
+
+	public static void main(String[] args) throws MalformedURLException {
+		URL url = new URL("https://n.news.naver.com/article/417/0000871006?cds=news_media_pc&type=editn");
+		System.out.println("getAuthority :" url.getAuthority());
+
+	}
+
+}

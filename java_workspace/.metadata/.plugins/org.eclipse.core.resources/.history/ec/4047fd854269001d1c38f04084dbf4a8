@@ -1,0 +1,18 @@
+package new02;
+
+import java.util.HashMap;
+
+public class Map02 {
+
+	public static void main(String[] args) {
+		// 출력
+
+	}
+	//단어:의미를 입력받아서 map으로 구성
+	//리턴 : map
+	//매개변수 :X
+	public static HashMap<String, String> make(){
+		HashMap<String, String> map = new HashMap<String, String>();
+		return map;
+	}
+}

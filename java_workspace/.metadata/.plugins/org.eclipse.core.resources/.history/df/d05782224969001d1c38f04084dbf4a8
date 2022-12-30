@@ -1,0 +1,22 @@
+package new02;
+
+import java.io.BufferedReader;
+import java.net.URL;
+
+public class NetworkEx03 {
+
+	public static void main(String[] args) {
+		// https://maykids.co.kr/index.html
+		URL url = null;
+		BufferedReader input = null;
+		String address = "https://maykids.co.kr/index.html";
+		String line="";
+		try {
+			url = new URL(address);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+
+}

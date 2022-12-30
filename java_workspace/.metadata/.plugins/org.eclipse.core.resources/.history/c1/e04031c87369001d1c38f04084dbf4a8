@@ -1,0 +1,9 @@
+package jdbc;
+
+public class ProductService implements Service {
+
+	private DAO dao;
+	public ProductService() {
+		dao = new ProductDAO();
+	}
+}

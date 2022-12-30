@@ -1,0 +1,19 @@
+package new02;
+
+class Counter{
+	// 싱글톤 패턴으로 객체 만들기
+	private static Counter instance;
+	// getInstance()
+	// count()
+	
+}
+
+public class SingletonCounter {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}
+

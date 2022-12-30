@@ -1,0 +1,99 @@
+package jdbc;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class ProcuctController {
+
+	//상품등록, 상품리스트보기, 상품상세페이지보기, 상품수정, 상품삭제
+	//데이터베이스 연동한 후 컨트롤러에서 모든메뉴를 분기처리
+	//서비는 컨트롤러에서 호출, DAO는 서비스가 호출
+	private Scanner scan;
+	private Service svc;
+	private boolean flag; // 종료 변수 false = 종료
+	
+	public ProcuctController() {
+		scan = new Scanner(System.in);
+		svc = new ProductService(); //service 구현 객체
+		flag = true;
+		printMenu();
+	}
+
+	private void printMenu() {
+		while(flag) {
+			System.out.println("--상품관리시스템--");
+			System.out.println("1.등록 2.목록 3.찾기 4.수정 5.삭제 Etc.종료  메뉴선택>>");
+			int menu = scan.nextInt();
+			
+			switch(menu) {
+			case 1:
+				System.out.println("등록메뉴");
+				//실행 메서드를 등록
+				register();
+				break;
+			case 2:
+				System.out.println("list메뉴");
+				//실행 메서드를 등록
+				list();
+				break;
+			case 3:
+				System.out.println("detail메뉴");
+				//실행 메서드를 등록
+				detail();
+				break;
+			case 4:
+				System.out.println("edit메뉴");
+				//실행 메서드를 등록
+				edit();
+				break;
+			case 5:
+				System.out.println("remove메뉴");
+				//실행 메서드를 등록
+				remove();
+				break;
+				default:
+					flag = false;
+					break;
+			}
+		}
+		
+	}
+
+	private void remove() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void edit() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void detail() {
+		// select 내가 선택한 번호의 전체 내용 리턴
+		System.out.println("상품번호 >>");
+		int pno = scan.nextInt();
+		Product pvo = svc.detail(pno);
+		System.out.println(pvo);
+	}
+
+	private void list() {
+		// select 구문 * all
+		List<Product> list = svc.list();
+		//출력
+		for(Product p : list) {
+			System.out.println(p);
+		}
+	}
+
+	private void register() {
+		System.out.println("상품이름 >>");
+		String pname = scan.next();
+		System.out.println("상품가격 >>");
+		int price = scan.nextInt();
+		System.out.println("제조사 >>");
+		String madeby = scan.next();
+		int isOk = svc.register(new Product(pname, price, madeby));
+		System.out.println("상품등록 " + (isOk > 0? "성공" : "실패"));
+	}
+}

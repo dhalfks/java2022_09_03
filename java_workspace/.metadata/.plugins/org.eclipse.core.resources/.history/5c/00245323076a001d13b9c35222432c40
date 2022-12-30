@@ -1,0 +1,34 @@
+package jdbc;
+
+import java.util.List;
+
+public class ProductService implements Service {
+
+	private DAO dao;
+	public ProductService() {
+		dao = new ProductDAO();
+	}
+	@Override
+	public int register(Product product) {
+		// TODO Auto-generated method stub
+		System.out.println("insert_service success!!");
+		return dao.insert(product);
+	}
+	@Override
+	public List<Product> list() {
+		// TODO Auto-generated method stub
+		System.out.println("list_all success!!");
+		return dao.selectList();
+	}
+	@Override
+	public Product detail(int pno) {
+		// TODO Auto-generated method stub
+		System.out.println("detail success!!");
+		return dao.selectOne(pno);
+	}
+	@Override
+	public int edit(Product product) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
